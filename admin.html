@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Veloxa Admin — Package Management</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+<link rel="stylesheet" href="admin.css" />
+</head>
+<body class="admin-body">
+<header class="site-header">
+  <div class="container nav">
+    <a href="index.html" class="logo">
+      <span class="logo-mark">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16.5 9.4l-9-5.19"/><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><path d="M3.27 6.96L12 12.01l8.73-5.05"/><path d="M12 22.08V12"/></svg>
+      </span>
+      <span>Veloxa <span class="admin-tag">Admin</span></span>
+    </a>
+    <nav class="nav-links">
+      <a href="index.html">View site</a>
+    </nav>
+    <a href="index.html" class="nav-cta">Back to site</a>
+  </div>
+</header>
+
+<main class="admin-main container">
+  <section class="admin-hero">
+    <h1>Package management</h1>
+    <p>Create, edit, and remove tracking records. Changes are saved locally in this browser.</p>
+  </section>
+
+  <div class="admin-grid">
+    <!-- LIST -->
+    <aside class="admin-panel">
+      <div class="panel-head">
+        <h2>Packages</h2>
+        <button id="newBtn" class="btn-accent btn-sm"><span class="btn-label">+ New package</span></button>
+      </div>
+      <input id="searchInput" class="admin-input" type="text" placeholder="Search tracking ID..." />
+      <ul id="pkgList" class="pkg-list"></ul>
+      <p id="emptyList" class="muted-note" hidden>No packages yet. Create one to get started.</p>
+    </aside>
+
+    <!-- EDITOR -->
+    <section class="admin-panel editor">
+      <form id="pkgForm" class="pkg-form">
+        <div class="form-head">
+          <h2 id="formTitle">New package</h2>
+          <div class="form-actions">
+            <button type="button" id="deleteBtn" class="btn-ghost" hidden>Delete</button>
+            <button type="submit" class="btn-accent btn-sm"><span class="btn-label">Save package</span></button>
+          </div>
+        </div>
+
+        <div class="form-grid">
+          <label>Tracking ID
+            <input name="trackingId" required placeholder="VLX9F2K7Q1" />
+          </label>
+          <label>Service
+            <input name="service" required placeholder="Veloxa Express International" />
+          </label>
+          <label>Origin
+            <input name="origin" required placeholder="Berlin, DE" />
+          </label>
+          <label>Destination
+            <input name="destination" required placeholder="New York, US" />
+          </label>
+          <label>Weight
+            <input name="weight" required placeholder="2.4 kg" />
+          </label>
+          <label>Estimated delivery
+            <input name="estimatedDelivery" required placeholder="May 22, 2026" />
+          </label>
+          <label>Current status
+            <select name="currentStatus" id="currentStatusSelect" required></select>
+          </label>
+          <label>Progress (%)
+            <input name="progress" type="number" min="0" max="100" required value="50" />
+          </label>
+        </div>
+
+        <div class="events-head">
+          <h3>Timeline events</h3>
+          <button type="button" id="addEventBtn" class="btn-ghost btn-sm">+ Add event</button>
+        </div>
+        <div id="eventsList" class="events-list"></div>
+
+        <p id="formMsg" class="form-msg" hidden></p>
+      </form>
+    </section>
+  </div>
+</main>
+
+<script type="module" src="admin.js"></script>
+</body>
+</html>

@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Veloxa — Fast, reliable global courier & parcel tracking</title>
+<meta name="description" content="Track your parcels in real time and ship worldwide with Veloxa — a modern courier service built for speed, reliability and visibility." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<!-- HEADER -->
+<header class="site-header">
+  <div class="container nav">
+    <a href="#" class="logo">
+      <span class="logo-mark">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16.5 9.4l-9-5.19"/><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><path d="M3.27 6.96L12 12.01l8.73-5.05"/><path d="M12 22.08V12"/></svg>
+      </span>
+      <span>Veloxa</span>
+    </a>
+    <nav class="nav-links">
+      <a href="#track">Track</a>
+      <a href="#services">Services</a>
+      <a href="#how">How it works</a>
+      <a href="#contact">Contact</a>
+      <a href="admin.html">Admin</a>
+    </nav>
+    <a href="admin.html" class="nav-cta">Admin panel</a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg">
+    <img src="hero-courier.jpg" alt="Courier van and cargo plane at sunset" />
+    <div class="hero-overlay"></div>
+    <div class="hero-fade"></div>
+  </div>
+  <div class="container hero-inner">
+    <span class="badge">
+      <span class="badge-dot"></span> Worldwide express courier
+    </span>
+    <h1>Deliveries on time.<br /><span class="grad-text">Every single time.</span></h1>
+    <p class="hero-sub">Ship across the city or across the world with full visibility. Enter your tracking number below to see where your package is right now.</p>
+
+    <form id="track" class="track-form" autocomplete="off">
+      <div class="track-input">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.3-4.3"/></svg>
+        <input type="text" id="trackingInput" placeholder="Enter your tracking number e.g. VLX9F2K7Q1" maxlength="40" aria-label="Tracking number" />
+      </div>
+      <button type="submit" class="btn-accent" id="trackBtn">
+        <span class="btn-label">Track package</span>
+      </button>
+    </form>
+    <p class="error-msg" id="errorMsg" hidden></p>
+    <div id="resultMount"></div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="stats">
+  <div class="container stats-grid">
+    <div><p class="stat-v">220+</p><p class="stat-l">Countries served</p></div>
+    <div><p class="stat-v">12M</p><p class="stat-l">Parcels delivered</p></div>
+    <div><p class="stat-v">99.4%</p><p class="stat-l">On-time rate</p></div>
+    <div><p class="stat-v">24/7</p><p class="stat-l">Live support</p></div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services" class="section">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow">What we do</p>
+      <h2>A full logistics stack, built for modern senders</h2>
+      <p class="lead">From first mile to last mile, Veloxa moves your goods with care, speed and total transparency.</p>
+    </div>
+    <div class="service-grid" id="serviceGrid"></div>
+  </div>
+</section>
+
+<!-- HOW -->
+<section id="how" class="section section-alt">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow">How it works</p>
+      <h2>Shipping that just works, end to end</h2>
+    </div>
+    <div class="steps-grid" id="stepsGrid"></div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section id="contact" class="section">
+  <div class="container">
+    <div class="cta-card">
+      <div>
+        <h2>Ready to send something?</h2>
+        <p>Get an instant quote and book a courier pickup in less than a minute.</p>
+      </div>
+      <div class="cta-actions">
+        <a href="#track" class="btn-accent">Get a quote →</a>
+        <a href="#track" class="btn-ghost">Track a parcel</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div class="logo">
+      <span class="logo-mark logo-mark-sm">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16.5 9.4l-9-5.19"/><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+      </span>
+      <span>Veloxa</span>
+    </div>
+    <p class="copy">© <span id="year"></span> Veloxa Logistics. All rights reserved.</p>
+    <div class="footer-links">
+      <a href="#">Privacy</a><a href="#">Terms</a><a href="#">Contact</a>
+    </div>
+  </div>
+</footer>
+
+<script type="module" src="script.js"></script>
+</body>
+</html>
