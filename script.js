@@ -3,8 +3,8 @@ document.getElementById('year').textContent = new Date().getFullYear();
 
 // ---- Supabase ----
 import { createClient } from 'https://esm.sh/@supabase/supabase-js@2';
-const SUPABASE_URL = 'https://mvltjxcgytuipllhutzh.supabase.co';
-const SUPABASE_KEY = 'sb_publishable_sGgEGj4jm70Gx0S_LZ8Zbw_6V7mr1Uh';
+const SUPABASE_URL = 'https://yrtkxvbaiqmkxhgaiapy.supabase.co';
+const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InlydGt4dmJhaXFta3hoZ2FpYXB5Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODAzMzgwNzgsImV4cCI6MjA5NTkxNDA3OH0.BQf07XS9ao_owbr0DOxZF2HBQLFnSlZe2os0_1jDXJo';
 const supabase = createClient(SUPABASE_URL, SUPABASE_KEY, { auth: { persistSession: false } });
 
 // ---- Services + Steps (rendered from data) ----
